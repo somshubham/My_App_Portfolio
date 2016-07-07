@@ -8,8 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,35 +20,50 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+        Button b1 = (Button) findViewById(R.id.button);
+        b1.setOnClickListener(this);
+        Button b2 = (Button) findViewById(R.id.button2);
+        b2.setOnClickListener(this);
+        Button b3 = (Button) findViewById(R.id.button3);
+        b3.setOnClickListener(this);
+        Button b4 = (Button) findViewById(R.id.button4);
+        b4.setOnClickListener(this);
+        Button b5 = (Button) findViewById(R.id.button5);
+        b5.setOnClickListener(this);
+        Button b6 = (Button) findViewById(R.id.button6);
+        b6.setOnClickListener(this);
+
+
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void onClick(View v) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+
+
+        switch(v.getId()) {
+            case R.id.button:
+                Toast.makeText(MainActivity.this, "This button will launch popular movies app! ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button2:
+                Toast.makeText(MainActivity.this, "This button will launch stock hawk app! ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button3:
+                Toast.makeText(MainActivity.this, "This button will launch build it bigger app! ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button4:
+                Toast.makeText(MainActivity.this, "This button will launch make your app material app! ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button5:
+                Toast.makeText(MainActivity.this, "This button will launch go ubiquitous app! ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button6:
+                Toast.makeText(MainActivity.this, "This button will launch capstone app! ", Toast.LENGTH_SHORT).show();
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
     }
 }
