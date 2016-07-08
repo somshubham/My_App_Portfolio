@@ -11,6 +11,9 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.som.myappportfolio.MainActivity"
     tools:showIn="@layout/activity_main">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My Nanodegree Apps!"
+            android:text="@string/content"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
             android:textSize="22dp"
@@ -31,8 +34,8 @@
         <Button
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="POPULAR MOVIES"
-            android:id="@+id/button"
+            android:text="@string/app1"
+            android:id="@+id/popular_movies_button"
             android:layout_gravity="center_horizontal"
             android:background="#2E3D49"
             android:textColor="#ffffff"
@@ -41,8 +44,8 @@
         <Button
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="STOCK HAWK"
-            android:id="@+id/button2"
+            android:text="@string/app2"
+            android:id="@+id/stock_hawk_button"
             android:layout_gravity="center_horizontal"
             android:background="#2E3D49"
             android:textColor="#ffffff"
@@ -51,8 +54,8 @@
         <Button
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="BUILD IT BIGGER"
-            android:id="@+id/button3"
+            android:text="@string/app3"
+            android:id="@+id/build_it_bigger_button"
             android:layout_gravity="center_horizontal"
             android:background="#2E3D49"
             android:textColor="#ffffff"
@@ -61,8 +64,8 @@
         <Button
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="MAKE YOUR APP MATERIAL"
-            android:id="@+id/button4"
+            android:text="@string/app4"
+            android:id="@+id/make_your_app_material_button"
             android:layout_gravity="center_horizontal"
             android:textColor="#ffffff"
             android:background="#2E3D49"
@@ -71,8 +74,8 @@
         <Button
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="GO UBIQUITOUS"
-            android:id="@+id/button5"
+            android:text="@string/app5"
+            android:id="@+id/go_ubiquitous_button"
             android:layout_gravity="center_horizontal"
             android:background="#2E3D49"
             android:textColor="#ffffff"
@@ -81,12 +84,15 @@
         <Button
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="CAPSTONE"
-            android:id="@+id/button6"
+            android:text="@string/app6"
+            android:id="@+id/capstone_button"
             android:layout_gravity="center_horizontal"
             android:background="#2E3D49"
 
             android:textColor="#ffffff"
             android:layout_margin="5dp" />
     </LinearLayout>
+
+
+    </ScrollView>
 </RelativeLayout>
